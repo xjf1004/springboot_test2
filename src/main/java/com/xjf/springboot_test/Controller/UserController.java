@@ -33,6 +33,7 @@ public class UserController {
         User user = userService.getById(id);
         model.addAttribute("user",user);
         System.out.println("hello");
+        System.out.println("hot-fix分支");
         return "table";
 
     }

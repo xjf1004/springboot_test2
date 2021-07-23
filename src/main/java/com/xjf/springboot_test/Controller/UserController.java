@@ -34,6 +34,7 @@ public class UserController {
         model.addAttribute("user",user);
         System.out.println("hello");
         System.out.println("hot-fix分支");
+        System.out.println("hhhh");
         return "table";
 
     }

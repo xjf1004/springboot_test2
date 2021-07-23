@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" th:action="@{/xjf03}" method="post" enctype="multipart/form-data">
+    请输入姓名：<input type="text" name="name"><br>
+    请输入邮件：<input type="text" name="email"><br>
+    请输入年龄：<input type="text" name="age"><br>
+    选择上传的文件:<br>
+    <input type="file" multiple name="photos">
+    <br>
+    <br>
+    <input type="submit" value="提交">
+
+    <!--model中传递过来的有user类对象还有字符串，int等类型
+    thmeleaf在解析时，必须保证user不为空，即必须有user这个对象，如果没有这个对象会报错
+    而普通类型可为null，所以直接用id，name，email，age不会报错
+    用user.id会报错
+    -->
+<label th:text="${id}"></label><br>
+<label th:text="${name}"></label><br>
+<label th:text="${age}"></label><br>
+<label th:text="${email}"></label><br>
+
+
+
+</form>
+
+
+
+</body>
+</html>
